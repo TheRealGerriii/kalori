@@ -14,20 +14,32 @@
  */
 
 public class calcBMR {
-    double weight;
-    double height;
-    double age;
-    
-    public void setData(double weight, double height, double age){
-        this.weight = weight;
-        this.height = height;
-        this.age = age;
-    }
-    public double calcWomenBMR (){
+
+    public double calcWomenBMR (double weight, double height, double age){
+        if(weight < 1){
+            throw new IllegalArgumentException("nem lehet ekkora a testömeg!");
+        }
+        if(height < 1){
+            throw new IllegalArgumentException("nem lehet ekkora a magasság!");
+        }
+        if(age < 1){
+            throw new IllegalArgumentException("nem lehet ekkora az életkor!");
+        }
         double result = 9.247 * weight + 3.098 * height - 4.330 * age + 447.593;
         return result;
+        
+
     }
-    public double calcManBMR(){
+    public double calcManBMR(double weight, double height, double age){
+        if(weight < 1){
+            throw new IllegalArgumentException("nem lehet ekkora a testömeg!");
+        }
+        if(height < 1){
+            throw new IllegalArgumentException("nem lehet ekkora a magasság!");
+        }
+        if(age < 1){
+            throw new IllegalArgumentException("nem lehet ekkora az életkor!");
+        }
         double result = 13.397 * weight + 4.799 * height - 5.667 * age + 88.362;
         return result;
     }

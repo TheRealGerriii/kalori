@@ -17,6 +17,5 @@ public class App {
     public static void main(String[] args){
         calcBMR calbmr = new calcBMR();
         System.out.println("Napi kalóriaigény számoló program. Készítette: Hermányi Gergely Barnabás 2021-11-29");
-        //System.out.println(calbmr.calcManBMR());
     }
 }
